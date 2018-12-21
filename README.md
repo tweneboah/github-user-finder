@@ -13,7 +13,7 @@ For the method, the main idea is to return a user object so I used a async/ awai
 \*\*
 I used a fetch() api to get a response from the github url and this will always return json format so to be able use in javascript i have to conevrt them into object by using response.json()
 
-##CODE DEMO
+## CODE DEMO
 
 ```javascript
 class GithubUser {
