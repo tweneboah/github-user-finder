@@ -8,11 +8,14 @@ class GithubUser {
     //This method will pull a user data using fetch() and it will return a JSON. format
     async getUser(users) {
         let profileResponse = await fetch(`https://api.github.com/users/${users}?client_id=${this.client_id}&client_secret=${this.client_secret}`)
-        profileResponse = profileResponse.json();
-        console.log(profileResponse)
+        let profile = await profileResponse.json();
+
+        return {
+            profile: profile
+        }
+
     }
+
 
 }
 
-const getGithubUser = new GithubUser;
-getGithubUser.getUser("tweneboah")
